@@ -1,0 +1,328 @@
+/home/norja159/miniconda3/envs/huggingface/lib/python3.10/site-packages/torch/distributed/launch.py:180: FutureWarning: The module torch.distributed.launch is deprecated
+and will be removed in future. Use torchrun.
+Note that --use_env is set by default in torchrun.
+If your script expects `--local_rank` argument to be set, please
+change it to read from `os.environ['LOCAL_RANK']` instead. See 
+https://pytorch.org/docs/stable/distributed.html#launch-utility for 
+further instructions
+
+  warnings.warn(
+WARNING:torch.distributed.run:
+*****************************************
+Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
+*****************************************
+02/21/2023 15:34:51 - WARNING - __main__ - Process rank: 1, device: cuda:1, n_gpu: 1distributed training: True, 16-bits training: False
+02/21/2023 15:34:51 - WARNING - __main__ - Process rank: 0, device: cuda:0, n_gpu: 1distributed training: True, 16-bits training: False
+02/21/2023 15:34:51 - INFO - __main__ - Training/evaluation parameters Seq2SeqTrainingArguments(
+_n_gpu=1,
+adafactor=False,
+adam_beta1=0.9,
+adam_beta2=0.999,
+adam_epsilon=1e-08,
+auto_find_batch_size=False,
+bf16=False,
+bf16_full_eval=False,
+data_seed=None,
+dataloader_drop_last=False,
+dataloader_num_workers=0,
+dataloader_pin_memory=True,
+ddp_bucket_cap_mb=None,
+ddp_find_unused_parameters=None,
+ddp_timeout=1800,
+debug=[],
+deepspeed=None,
+disable_tqdm=False,
+do_eval=True,
+do_predict=False,
+do_train=True,
+eval_accumulation_steps=None,
+eval_delay=0,
+eval_steps=None,
+evaluation_strategy=epoch,
+fp16=False,
+fp16_backend=auto,
+fp16_full_eval=False,
+fp16_opt_level=O1,
+fsdp=[],
+fsdp_config={'fsdp_min_num_params': 0},
+fsdp_min_num_params=0,
+fsdp_transformer_layer_cls_to_wrap=None,
+full_determinism=False,
+generation_max_length=None,
+generation_num_beams=None,
+gradient_accumulation_steps=1,
+gradient_checkpointing=False,
+greater_is_better=None,
+group_by_length=False,
+half_precision_backend=auto,
+hub_model_id=None,
+hub_private_repo=False,
+hub_strategy=every_save,
+hub_token=<HUB_TOKEN>,
+ignore_data_skip=False,
+include_inputs_for_metrics=False,
+jit_mode_eval=False,
+label_names=None,
+label_smoothing_factor=0.0,
+learning_rate=5e-05,
+length_column_name=length,
+load_best_model_at_end=False,
+local_rank=0,
+log_level=passive,
+log_level_replica=passive,
+log_on_each_node=True,
+logging_dir=/home/norja159/tmp/tst-summarization/runs/Feb21_15-34-50_rtis-gpu-04.uod.otago.ac.nz,
+logging_first_step=False,
+logging_nan_inf_filter=True,
+logging_steps=500,
+logging_strategy=steps,
+lr_scheduler_type=linear,
+max_grad_norm=1.0,
+max_steps=-1,
+metric_for_best_model=None,
+mp_parameters=,
+no_cuda=False,
+num_train_epochs=100.0,
+optim=adamw_hf,
+optim_args=None,
+output_dir=/home/norja159/tmp/tst-summarization,
+overwrite_output_dir=True,
+past_index=-1,
+per_device_eval_batch_size=1,
+per_device_train_batch_size=1,
+predict_with_generate=True,
+prediction_loss_only=False,
+push_to_hub=False,
+push_to_hub_model_id=None,
+push_to_hub_organization=None,
+push_to_hub_token=<PUSH_TO_HUB_TOKEN>,
+ray_scope=last,
+remove_unused_columns=True,
+report_to=[],
+resume_from_checkpoint=None,
+run_name=/home/norja159/tmp/tst-summarization,
+save_on_each_node=False,
+save_steps=500,
+save_strategy=steps,
+save_total_limit=None,
+seed=42,
+sharded_ddp=[],
+skip_memory_metrics=True,
+sortish_sampler=False,
+tf32=None,
+torch_compile=False,
+torch_compile_backend=None,
+torch_compile_mode=None,
+torchdynamo=None,
+tpu_metrics_debug=False,
+tpu_num_cores=None,
+use_ipex=False,
+use_legacy_prediction_loop=False,
+use_mps_device=False,
+warmup_ratio=0.0,
+warmup_steps=0,
+weight_decay=0.0,
+xpu_backend=None,
+)
+02/21/2023 15:34:51 - WARNING - datasets.builder - Using custom data configuration default-743918bd5866c05a
+02/21/2023 15:34:51 - WARNING - datasets.builder - Found cached dataset json (/home/norja159/.cache/huggingface/datasets/json/default-743918bd5866c05a/0.0.0/0f7e3662623656454fcd2b650f34e886a7db4b9104504885bd462096cc7a9f51)
+  0%|          | 0/2 [00:00<?, ?it/s]100%|██████████| 2/2 [00:00<00:00, 1531.05it/s]
+02/21/2023 15:34:51 - WARNING - datasets.builder - Using custom data configuration default-743918bd5866c05a
+02/21/2023 15:34:51 - INFO - datasets.info - Loading Dataset Infos from /home/norja159/miniconda3/envs/huggingface/lib/python3.10/site-packages/datasets/packaged_modules/json
+02/21/2023 15:34:51 - INFO - datasets.builder - Overwrite dataset info from restored data version.
+02/21/2023 15:34:51 - INFO - datasets.info - Loading Dataset info from /home/norja159/.cache/huggingface/datasets/json/default-743918bd5866c05a/0.0.0/0f7e3662623656454fcd2b650f34e886a7db4b9104504885bd462096cc7a9f51
+02/21/2023 15:34:51 - WARNING - datasets.builder - Found cached dataset json (/home/norja159/.cache/huggingface/datasets/json/default-743918bd5866c05a/0.0.0/0f7e3662623656454fcd2b650f34e886a7db4b9104504885bd462096cc7a9f51)
+02/21/2023 15:34:51 - INFO - datasets.info - Loading Dataset info from /home/norja159/.cache/huggingface/datasets/json/default-743918bd5866c05a/0.0.0/0f7e3662623656454fcd2b650f34e886a7db4b9104504885bd462096cc7a9f51
+  0%|          | 0/2 [00:00<?, ?it/s]100%|██████████| 2/2 [00:00<00:00, 1524.37it/s]
+[INFO|configuration_utils.py:668] 2023-02-21 15:34:52,850 >> loading configuration file config.json from cache at /home/norja159/.cache/huggingface/hub/models--google--long-t5-tglobal-base/snapshots/aecb1376e5bd78db32ebc5c9deb257449b9e2b21/config.json
+[INFO|configuration_utils.py:720] 2023-02-21 15:34:52,852 >> Model config LongT5Config {
+  "_name_or_path": "google/long-t5-tglobal-base",
+  "architectures": [
+    "LongT5ForConditionalGeneration"
+  ],
+  "d_ff": 2048,
+  "d_kv": 64,
+  "d_model": 768,
+  "decoder_start_token_id": 0,
+  "dense_act_fn": "gelu_new",
+  "dropout_rate": 0.1,
+  "encoder_attention_type": "transient-global",
+  "eos_token_id": 1,
+  "feed_forward_proj": "gated-gelu",
+  "global_block_size": 16,
+  "initializer_factor": 1.0,
+  "is_encoder_decoder": true,
+  "is_gated_act": true,
+  "layer_norm_epsilon": 1e-06,
+  "local_radius": 127,
+  "model_type": "longt5",
+  "n_positions": 4096,
+  "num_decoder_layers": 12,
+  "num_heads": 12,
+  "num_layers": 12,
+  "output_past": true,
+  "pad_token_id": 0,
+  "relative_attention_max_distance": 128,
+  "relative_attention_num_buckets": 32,
+  "tie_word_embeddings": false,
+  "torch_dtype": "float32",
+  "transformers_version": "4.27.0.dev0",
+  "use_cache": true,
+  "vocab_size": 32128
+}
+
+[INFO|tokenization_auto.py:460] 2023-02-21 15:34:53,737 >> Could not locate the tokenizer configuration file, will try to use the model config instead.
+[INFO|configuration_utils.py:668] 2023-02-21 15:34:54,621 >> loading configuration file config.json from cache at /home/norja159/.cache/huggingface/hub/models--google--long-t5-tglobal-base/snapshots/aecb1376e5bd78db32ebc5c9deb257449b9e2b21/config.json
+[INFO|configuration_utils.py:720] 2023-02-21 15:34:54,621 >> Model config LongT5Config {
+  "_name_or_path": "google/long-t5-tglobal-base",
+  "architectures": [
+    "LongT5ForConditionalGeneration"
+  ],
+  "d_ff": 2048,
+  "d_kv": 64,
+  "d_model": 768,
+  "decoder_start_token_id": 0,
+  "dense_act_fn": "gelu_new",
+  "dropout_rate": 0.1,
+  "encoder_attention_type": "transient-global",
+  "eos_token_id": 1,
+  "feed_forward_proj": "gated-gelu",
+  "global_block_size": 16,
+  "initializer_factor": 1.0,
+  "is_encoder_decoder": true,
+  "is_gated_act": true,
+  "layer_norm_epsilon": 1e-06,
+  "local_radius": 127,
+  "model_type": "longt5",
+  "n_positions": 4096,
+  "num_decoder_layers": 12,
+  "num_heads": 12,
+  "num_layers": 12,
+  "output_past": true,
+  "pad_token_id": 0,
+  "relative_attention_max_distance": 128,
+  "relative_attention_num_buckets": 32,
+  "tie_word_embeddings": false,
+  "torch_dtype": "float32",
+  "transformers_version": "4.27.0.dev0",
+  "use_cache": true,
+  "vocab_size": 32128
+}
+
+[INFO|tokenization_utils_base.py:1802] 2023-02-21 15:34:56,391 >> loading file spiece.model from cache at /home/norja159/.cache/huggingface/hub/models--google--long-t5-tglobal-base/snapshots/aecb1376e5bd78db32ebc5c9deb257449b9e2b21/spiece.model
+[INFO|tokenization_utils_base.py:1802] 2023-02-21 15:34:56,391 >> loading file tokenizer.json from cache at /home/norja159/.cache/huggingface/hub/models--google--long-t5-tglobal-base/snapshots/aecb1376e5bd78db32ebc5c9deb257449b9e2b21/tokenizer.json
+[INFO|tokenization_utils_base.py:1802] 2023-02-21 15:34:56,391 >> loading file added_tokens.json from cache at None
+[INFO|tokenization_utils_base.py:1802] 2023-02-21 15:34:56,391 >> loading file special_tokens_map.json from cache at None
+[INFO|tokenization_utils_base.py:1802] 2023-02-21 15:34:56,391 >> loading file tokenizer_config.json from cache at None
+[INFO|configuration_utils.py:668] 2023-02-21 15:34:56,391 >> loading configuration file config.json from cache at /home/norja159/.cache/huggingface/hub/models--google--long-t5-tglobal-base/snapshots/aecb1376e5bd78db32ebc5c9deb257449b9e2b21/config.json
+[INFO|configuration_utils.py:720] 2023-02-21 15:34:56,392 >> Model config LongT5Config {
+  "_name_or_path": "google/long-t5-tglobal-base",
+  "architectures": [
+    "LongT5ForConditionalGeneration"
+  ],
+  "d_ff": 2048,
+  "d_kv": 64,
+  "d_model": 768,
+  "decoder_start_token_id": 0,
+  "dense_act_fn": "gelu_new",
+  "dropout_rate": 0.1,
+  "encoder_attention_type": "transient-global",
+  "eos_token_id": 1,
+  "feed_forward_proj": "gated-gelu",
+  "global_block_size": 16,
+  "initializer_factor": 1.0,
+  "is_encoder_decoder": true,
+  "is_gated_act": true,
+  "layer_norm_epsilon": 1e-06,
+  "local_radius": 127,
+  "model_type": "longt5",
+  "n_positions": 4096,
+  "num_decoder_layers": 12,
+  "num_heads": 12,
+  "num_layers": 12,
+  "output_past": true,
+  "pad_token_id": 0,
+  "relative_attention_max_distance": 128,
+  "relative_attention_num_buckets": 32,
+  "tie_word_embeddings": false,
+  "torch_dtype": "float32",
+  "transformers_version": "4.27.0.dev0",
+  "use_cache": true,
+  "vocab_size": 32128
+}
+
+[INFO|modeling_utils.py:2326] 2023-02-21 15:34:56,427 >> loading weights file pytorch_model.bin from cache at /home/norja159/.cache/huggingface/hub/models--google--long-t5-tglobal-base/snapshots/aecb1376e5bd78db32ebc5c9deb257449b9e2b21/pytorch_model.bin
+[INFO|configuration_utils.py:572] 2023-02-21 15:34:56,753 >> Generate config GenerationConfig {
+  "_from_model_config": true,
+  "decoder_start_token_id": 0,
+  "eos_token_id": 1,
+  "pad_token_id": 0,
+  "transformers_version": "4.27.0.dev0"
+}
+
+[INFO|modeling_utils.py:2912] 2023-02-21 15:34:58,034 >> All model checkpoint weights were used when initializing LongT5ForConditionalGeneration.
+
+[INFO|modeling_utils.py:2920] 2023-02-21 15:34:58,034 >> All the weights of LongT5ForConditionalGeneration were initialized from the model checkpoint at google/long-t5-tglobal-base.
+If your task is similar to the task the model of the checkpoint was trained on, you can already use LongT5ForConditionalGeneration for predictions without further training.
+[INFO|configuration_utils.py:534] 2023-02-21 15:34:58,913 >> loading configuration file generation_config.json from cache at /home/norja159/.cache/huggingface/hub/models--google--long-t5-tglobal-base/snapshots/aecb1376e5bd78db32ebc5c9deb257449b9e2b21/generation_config.json
+[INFO|configuration_utils.py:572] 2023-02-21 15:34:58,913 >> Generate config GenerationConfig {
+  "_from_model_config": true,
+  "decoder_start_token_id": 0,
+  "eos_token_id": 1,
+  "pad_token_id": 0,
+  "transformers_version": "4.27.0.dev0"
+}
+
+02/21/2023 15:34:58 - WARNING - datasets.arrow_dataset - Loading cached processed dataset at /home/norja159/.cache/huggingface/datasets/json/default-743918bd5866c05a/0.0.0/0f7e3662623656454fcd2b650f34e886a7db4b9104504885bd462096cc7a9f51/cache-9e12a930694312b1.arrow
+02/21/2023 15:34:59 - WARNING - datasets.arrow_dataset - Loading cached processed dataset at /home/norja159/.cache/huggingface/datasets/json/default-743918bd5866c05a/0.0.0/0f7e3662623656454fcd2b650f34e886a7db4b9104504885bd462096cc7a9f51/cache-16df08ef2b5afc04.arrow
+02/21/2023 15:34:59 - WARNING - datasets.arrow_dataset - Loading cached processed dataset at /home/norja159/.cache/huggingface/datasets/json/default-743918bd5866c05a/0.0.0/0f7e3662623656454fcd2b650f34e886a7db4b9104504885bd462096cc7a9f51/cache-9e12a930694312b1.arrow
+02/21/2023 15:34:59 - WARNING - datasets.arrow_dataset - Loading cached processed dataset at /home/norja159/.cache/huggingface/datasets/json/default-743918bd5866c05a/0.0.0/0f7e3662623656454fcd2b650f34e886a7db4b9104504885bd462096cc7a9f51/cache-16df08ef2b5afc04.arrow
+/home/norja159/Documents/hugging_face/transformers/src/transformers/optimization.py:346: FutureWarning: This implementation of AdamW is deprecated and will be removed in a future version. Use the PyTorch implementation torch.optim.AdamW instead, or set `no_deprecation_warning=True` to disable this warning
+  warnings.warn(
+/home/norja159/Documents/hugging_face/transformers/src/transformers/optimization.py:346: FutureWarning: This implementation of AdamW is deprecated and will be removed in a future version. Use the PyTorch implementation torch.optim.AdamW instead, or set `no_deprecation_warning=True` to disable this warning
+  warnings.warn(
+[INFO|trainer.py:1683] 2023-02-21 15:35:01,830 >> ***** Running training *****
+[INFO|trainer.py:1684] 2023-02-21 15:35:01,830 >>   Num examples = 299
+[INFO|trainer.py:1685] 2023-02-21 15:35:01,830 >>   Num Epochs = 100
+[INFO|trainer.py:1686] 2023-02-21 15:35:01,830 >>   Instantaneous batch size per device = 1
+[INFO|trainer.py:1687] 2023-02-21 15:35:01,830 >>   Total train batch size (w. parallel, distributed & accumulation) = 2
+[INFO|trainer.py:1688] 2023-02-21 15:35:01,830 >>   Gradient Accumulation steps = 1
+[INFO|trainer.py:1689] 2023-02-21 15:35:01,830 >>   Total optimization steps = 15000
+[INFO|trainer.py:1690] 2023-02-21 15:35:01,831 >>   Number of trainable parameters = 247587456
+  0%|          | 0/15000 [00:00<?, ?it/s][WARNING|logging.py:278] 2023-02-21 15:35:01,972 >> You're using a T5TokenizerFast tokenizer. Please note that with a fast tokenizer, using the `__call__` method is faster than using a method to encode the text followed by a call to the `pad` method to get a padded encoding.
+[WARNING|logging.py:278] 2023-02-21 15:35:01,972 >> You're using a T5TokenizerFast tokenizer. Please note that with a fast tokenizer, using the `__call__` method is faster than using a method to encode the text followed by a call to the `pad` method to get a padded encoding.
+/home/norja159/Documents/hugging_face/transformers/src/transformers/modeling_utils.py:774: FutureWarning: The `device` argument is deprecated and will be removed in v5 of Transformers.
+  warnings.warn(
+[W reducer.cpp:1298] Warning: find_unused_parameters=True was specified in DDP constructor, but did not find any unused parameters in the forward pass. This flag results in an extra traversal of the autograd graph every iteration,  which can adversely affect performance. If your model indeed never has any unused parameters in the forward pass, consider turning this flag off. Note that this warning may be a false positive if your model has flow control causing later iterations to have unused parameters. (function operator())
+/home/norja159/Documents/hugging_face/transformers/src/transformers/modeling_utils.py:774: FutureWarning: The `device` argument is deprecated and will be removed in v5 of Transformers.
+  warnings.warn(
+[W reducer.cpp:1298] Warning: find_unused_parameters=True was specified in DDP constructor, but did not find any unused parameters in the forward pass. This flag results in an extra traversal of the autograd graph every iteration,  which can adversely affect performance. If your model indeed never has any unused parameters in the forward pass, consider turning this flag off. Note that this warning may be a false positive if your model has flow control causing later iterations to have unused parameters. (function operator())
+  0%|          | 1/15000 [00:00<3:19:57,  1.25it/s]  0%|          | 2/15000 [00:01<2:10:11,  1.92it/s]  0%|          | 3/15000 [00:01<1:46:58,  2.34it/s]  0%|          | 4/15000 [00:01<1:36:04,  2.60it/s]  0%|          | 5/15000 [00:02<1:29:59,  2.78it/s]  0%|          | 6/15000 [00:02<1:26:20,  2.89it/s]  0%|          | 7/15000 [00:02<1:23:57,  2.98it/s]  0%|          | 8/15000 [00:03<1:22:21,  3.03it/s]  0%|          | 9/15000 [00:03<1:21:25,  3.07it/s]  0%|          | 10/15000 [00:03<1:20:43,  3.09it/s]  0%|          | 11/15000 [00:03<1:20:12,  3.11it/s]  0%|          | 12/15000 [00:04<1:19:55,  3.13it/s]WARNING:torch.distributed.elastic.agent.server.api:Received 1 death signal, shutting down workers
+WARNING:torch.distributed.elastic.multiprocessing.api:Sending process 2497532 closing signal SIGHUP
+WARNING:torch.distributed.elastic.multiprocessing.api:Sending process 2497533 closing signal SIGHUP
+Traceback (most recent call last):
+  File "/home/norja159/miniconda3/envs/huggingface/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/home/norja159/miniconda3/envs/huggingface/lib/python3.10/runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "/home/norja159/miniconda3/envs/huggingface/lib/python3.10/site-packages/torch/distributed/launch.py", line 195, in <module>
+    main()
+  File "/home/norja159/miniconda3/envs/huggingface/lib/python3.10/site-packages/torch/distributed/launch.py", line 191, in main
+    launch(args)
+  File "/home/norja159/miniconda3/envs/huggingface/lib/python3.10/site-packages/torch/distributed/launch.py", line 176, in launch
+    run(args)
+  File "/home/norja159/miniconda3/envs/huggingface/lib/python3.10/site-packages/torch/distributed/run.py", line 753, in run
+    elastic_launch(
+  File "/home/norja159/miniconda3/envs/huggingface/lib/python3.10/site-packages/torch/distributed/launcher/api.py", line 132, in __call__
+    return launch_agent(self._config, self._entrypoint, list(args))
+  File "/home/norja159/miniconda3/envs/huggingface/lib/python3.10/site-packages/torch/distributed/launcher/api.py", line 237, in launch_agent
+    result = agent.run()
+  File "/home/norja159/miniconda3/envs/huggingface/lib/python3.10/site-packages/torch/distributed/elastic/metrics/api.py", line 129, in wrapper
+    result = f(*args, **kwargs)
+  File "/home/norja159/miniconda3/envs/huggingface/lib/python3.10/site-packages/torch/distributed/elastic/agent/server/api.py", line 709, in run
+    result = self._invoke_run(role)
+  File "/home/norja159/miniconda3/envs/huggingface/lib/python3.10/site-packages/torch/distributed/elastic/agent/server/api.py", line 850, in _invoke_run
+    time.sleep(monitor_interval)
+  File "/home/norja159/miniconda3/envs/huggingface/lib/python3.10/site-packages/torch/distributed/elastic/multiprocessing/api.py", line 62, in _terminate_process_handler
+    raise SignalException(f"Process {os.getpid()} got signal: {sigval}", sigval=sigval)
+torch.distributed.elastic.multiprocessing.api.SignalException: Process 2497498 got signal: 1

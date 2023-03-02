@@ -1,0 +1,5 @@
+{
+    "python.analysis.extraPaths": [
+        "./longT5/textsum/src"
+    ]
+}

@@ -1,0 +1,24 @@
+ python train.py -training_corpus_file_name ../../data/booksum/memsum_data_list_train_labelled.jsonl -validation_corpus_file_name ../../data/booksum/memsum_data_list_val.jsonl -model_folder ../../model/MemSum_Full/booksum/200dim/run0/ -log_folder ../../log/MemSum_Full/booksum/200dim/run0/ -vocabulary_file_name ../../model/glove/vocabulary_200dim.pkl -pretrained_unigram_embeddings_file_name ../../model/glove/unigram_embeddings_200dim.pkl -max_seq_len 100 -max_doc_len 500 -num_of_epochs 10 -save_every 1000 -n_device 2 -batch_size_per_device 1 -max_extracted_sentences_per_document 7 -moving_average_decay 0.999 -p_stop_thres 0.6
+
+ [0.26421527 0.06972525 0.24580137] 
+
+
+
+
+
+ [0.23514858 0.06270773 0.22033367]
+
+
+
+ python train.py -training_corpus_file_name ../../data/booksum/memsum_data_list_train_labelled.jsonl -validation_corpus_file_name ../../data/booksum/memsum_data_list_val.jsonl -model_folder ../../model/MemSum_Full/booksum/200dim/run0/ -log_folder ../../log/MemSum_Full/booksum/200dim/run0/ -vocabulary_file_name ../../model/glove/vocabulary_200dim.pkl -pretrained_unigram_embeddings_file_name ../../model/glove/unigram_embeddings_200dim.pkl -max_seq_len 100 -max_doc_len 500 -num_of_epochs 100 -save_every 1000 -n_device 2 -batch_size_per_device 1 -max_extracted_sentences_per_document 7 -moving_average_decay 0.999 -p_stop_thres 0.6
+
+ batch 3300 [0.28593653 0.07402647 0.26619386]
+
+python train.py -training_corpus_file_name ../../data/booksum/memsum_data_list_train_labelled.jsonl -validation_corpus_file_name ../../data/booksum/memsum_data_list_val.jsonl -model_folder ../../model/MemSum_Full/booksum/200dim/run2/ -log_folder ../../log/MemSum_Full/booksum/200dim/run2/ -vocabulary_file_name ../../model/glove/vocabulary_200dim.pkl -pretrained_unigram_embeddings_file_name ../../model/glove/unigram_embeddings_200dim.pkl -max_seq_len 100 -max_doc_len 500 -num_of_epochs 100 -save_every 1000 -n_device 2 -batch_size_per_device 1 -max_extracted_sentences_per_document 55 -moving_average_decay 0.999 -p_stop_thres 0.6
+
+python train.py -training_corpus_file_name ../../data/booksum/memsum_data_list_train_labelled.jsonl -validation_corpus_file_name ../../data/booksum/memsum_data_list_val.jsonl -model_folder ../../model/MemSum_Full/booksum/200dim/run3/ -log_folder ../../log/MemSum_Full/booksum/200dim/run3/ -vocabulary_file_name ../../model/glove/vocabulary_200dim.pkl -pretrained_unigram_embeddings_file_name ../../model/glove/unigram_embeddings_200dim.pkl -max_seq_len 100 -max_doc_len 500 -num_of_epochs 100 -save_every 1000 -n_device 2 -batch_size_per_device 1 -max_extracted_sentences_per_document 49 -moving_average_decay 0.999 -p_stop_thres 0.6
+
+
+nohup time python train.py -training_corpus_file_name ../../data/booksum/memsum_data_list_train_labelled.jsonl -validation_corpus_file_name ../../data/booksum/memsum_data_list_val.jsonl -model_folder ../../model/MemSum_Full/booksum/200dim/run3/ -log_folder ../../log/MemSum_Full/booksum/200dim/run3/ -vocabulary_file_name ../../model/glove/vocabulary_200dim.pkl -pretrained_unigram_embeddings_file_name ../../model/glove/unigram_embeddings_200dim.pkl -max_seq_len 100 -max_doc_len 500 -num_of_epochs 100 -save_every 1000 -n_device 2 -batch_size_per_device 1 -max_extracted_sentences_per_document 49 -moving_average_decay 0.999 -p_stop_thres 0.6 > 100_epoch_49_extract.txt
+
+nohup time python train.py -training_corpus_file_name ../../data/booksum/fixed_memsum_data_list_train_labelled.jsonl -validation_corpus_file_name ../../data/booksum/fixed_memsum_data_list_val.jsonl -model_folder ../../model/MemSum_Full/booksum/200dim/run3/ -log_folder ../../log/MemSum_Full/booksum/200dim/run3/ -vocabulary_file_name ../../model/glove/vocabulary_200dim.pkl -pretrained_unigram_embeddings_file_name ../../model/glove/unigram_embeddings_200dim.pkl -max_seq_len 100 -max_doc_len 500 -num_of_epochs 100 -save_every 1000 -n_device 2 -batch_size_per_device 1 -max_extracted_sentences_per_document 55 -moving_average_decay 0.999 -p_stop_thres 0.6 >fixed_100_epoch_55_extract.txt
